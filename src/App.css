@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #da9500;
+}
+
+.welcome-page {
+  background-image: url("https://images.unsplash.com/photo-1520002572468-c4e17d92e307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.loading {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .line-box {
+  width: 40%;
+  height: 22px;
+  border: 2px solid #267591;
+  border-radius: 20px;
+}
+
+.loading .line-box .line {
+  height: 18px;
+  border-radius: 20px;
+  background: #67D295;
+  animation: loading 3s forwards cubic-bezier(0, 0, 0, 0);
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.navigation {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 13%;
+  box-sizing: initial;
+  background: #2A2C31;
+  transition: 1s;
+  overflow-x: hidden;
+}
+
+.navigation .logo h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.icono-logo {
+  margin-left: 60px;
+}
+
+.navigation.active {
+  width: 200px;
+}
+
+.navigation ul {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-left: 14px;
+  padding-top: 10px;
+  margin-bottom: 25px;
+  transition: background-color 1s, color 1s;
+}
+
+.navigation ul li.active {
+  background: #da9500;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: rgb(173, 173, 173);
+}
+
+.navigation ul li.active a {
+  color: white;
+  font-weight: bold;
+}
+
+.navigation ul li a .icon img {
+  position: relative;
+  display: block;
+  min-width: 45px;
+  height: 45px;
+  line-height: 30px;
+  text-align: center;
+  transition: filter 1s;
+}
+
+.navigation ul li.active a .icon img {
+  filter: grayscale(0%);
+}
+
+.navigation ul li a .title {
+  padding-left: 15px;
+  height: 60px;
+  line-height: 60px;
+  white-space: normal;
+}
+
+.toggle {
+  position: fixed;
+  top: 10px;
+  left: 25px;
+  width: 20px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.toggle.active {
+}
+
+.toggle img {
+  position: absolute;
+  color: white;
+  font-size: 34px;
+  display: none;
+}
+
+.toggle img.open,
+.toggle.active img.close {
+  display: block;
+}
+
+.toggle img.close,
+.toggle.active img.open {
+  display: none;
+}
+
+.cats-feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  margin-left: 5%;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    box-sizing: initial;
+    background: #2A2C31;
+    transition: 1s;
+    overflow-x: hidden;
+  }
+
+  .navigation .logo img {
+    margin-left: 60px;
+  }
+
+  .toggle {
+    visibility: visible;
+  }
+
+  .cats-feed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    margin-left: 3%;
+  }
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1377px) {
+  .navigation {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    box-sizing: initial;
+    background: #2A2C31;
+    transition: 1s;
+    overflow-x: hidden;
+  }
+
+  .navigation .logo img {
+    margin-left: 60px;
+  }
+
+  .toggle {
+    visibility: visible;
+  }
+}
