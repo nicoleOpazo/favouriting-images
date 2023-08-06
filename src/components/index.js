@@ -1,4 +1,4 @@
 import SideBarComponent from "./SideBar";
-import WelcomeComponent from "./Welcome";
+import Image from "./Image";
 
-export { SideBarComponent, WelcomeComponent };
+export { SideBarComponent, Image };
